@@ -1,0 +1,27 @@
+/* Normolize */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: 0;
+  outline: 0;
+  background:0;
+  cursor:pointer;
+}
+
+/* General */
+.container {
+  width: 1360px;
+  margin: 0 auto;
+}
