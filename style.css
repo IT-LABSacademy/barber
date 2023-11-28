@@ -1,8 +1,9 @@
 :root {
-    --white: #ffffff;
-    --black: #000000;
-    --blue: #163561;
-    --sky: #99baed;
+  --white: #ffffff;
+  --black: #000000;
+  --blue: #163561;
+  --sky: #99baed;
+  --yellow: #FBB400;
 }
 
 /* Normolize */
@@ -34,8 +35,24 @@ body {
 }
 
 .container {
-  width: 1560px;
+  width: 100%;
+  max-width: 1590px;
   margin: 0 auto;
+  padding: 0 15px;
+}
+
+.btn {
+  background: var(--sky);
+  color: var(--white);
+  font-size: 20px;
+  font-weight: 700;
+  padding: 23px 33px;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  box-shadow: 10px 10px 20px #99BAED80;
 }
 
 /* Head */
@@ -51,6 +68,7 @@ body {
   justify-content: center;
   gap: 110px;
 }
+
 .head .container .left .menu {
   display: flex;
   align-items: flex-start;
@@ -82,16 +100,70 @@ body {
   gap: 72px;
 }
 
-.head .container .right .btn {
-  background: var(--sky);
-  color: var(--white);
-  font-size: 20px;
-  font-weight: 700;
-  padding: 23px 33px;
-  border-radius: 20px;
-  transition: 0.3s;
+.head .container .right .burger {
+  font-size: 28px;
+  color: var(--sky);
+  cursor: pointer;
+  display: none;
 }
 
-.head .container .right .btn:hover{
-    box-shadow: 10px 10px 20px #99BAED80;
+/* Media */
+@media(max-width: 1180px) {
+
+  .head .container .left,
+  .head .container .right {
+    gap: 50px;
+  }
+}
+
+@media(max-width: 1050px) {
+  .head .container {
+    align-items: center;
+  }
+
+  .head .container .left .menu,
+  .head .container .right .btn {
+    display: none;
+  }
+
+  .head .container .right .burger {
+    display: block;
+  }
+}
+
+@media(max-width: 500px) {
+  .head .container .left .logo img {
+    width: 120px;
+  }
+
+  .head .container .right img {
+    width: 40px;
+  }
+}
+
+/* Hero */
+.hero {
+  margin: 60px 0;
+  padding: 40px 0 80px;
+  background: url(images/hero-img.png) no-repeat right / contain;
+}
+
+.hero .container .left .title {
+  font-size: 75px;
+  color: var(--blue);
+  line-height: 100px;
+  width: 576px;
+}
+
+.hero .container .left .title span {
+  color: var(--yellow);
+}
+
+.hero .container .left .subtitle {
+  font-size: 25px;
+  letter-spacing: 3%;
+  color: var(--blue);
+  width: 526px;
+  opacity: 65%;
+  margin: 20px 0 50px;
 }
